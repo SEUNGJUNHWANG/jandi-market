@@ -184,11 +184,11 @@ fetch(`${URL}/?filter=(price>=15000)`)
 
       recommendedProductList.insertAdjacentHTML('beforeend', template);
       const addCart = document.querySelector('.add_cart');
-      const addCartModal = document.querySelector('#addCartModal');
+      const addCartModal = document.querySelector('#add_cart_modal');
       addCart.addEventListener('click', () => {
         openModal(addCartModal, 'modal_hidden');
       });
-      const closeBtn = document.querySelector('#closeModal');
+      const closeBtn = document.querySelector('#close_modal');
       closeBtn.addEventListener('click', () => {
         closeModal(addCartModal, 'modal_hidden');
       });
@@ -217,8 +217,8 @@ fetch(`${URL}/?filter=(price < 15000)`)
             item.name
           }" />
         </a>
-        <button class="mt-6pxr" type="button">
-          <img src="/banner/add cart button.png" alt="" />
+        <button class="add_cart mt-6pxr" type="button">
+          <img src="/banner/add_cart_button.png" alt="" />
         </button>
         <span class="font-semibold text-gray-200 text-14pxr mt-16pxr"
           >${item.desc}</span
